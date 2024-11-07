@@ -6,6 +6,16 @@
 
 // Не дуже зрозумів суть задачі
 
-let x = 1;
-x = x || "default";
-console.log(x);
+
+if (!x) {
+    x = "default";
+}
+
+
+
+// let x = 1;
+// x = x || "default";
+// console.log(x);
+
+
+
