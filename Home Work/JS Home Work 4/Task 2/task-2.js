@@ -15,5 +15,4 @@ function circleArea2 (circleRadius){
     return Math.PI*(circleRadius*circleRadius);
 }
 
-let circle1 = circleArea2 (12);
-console.log(circle1);
+console.log(circleArea2 (12));
