@@ -10,9 +10,8 @@ let rectangle1 = raincoat(5,8);
 console.log(rectangle1);
 
 // 2 варіант
-
 function raincoat2(a,b){
-    let result = a * b;
+    const result = a * b;
     console.log(result);
     return result;
 }
