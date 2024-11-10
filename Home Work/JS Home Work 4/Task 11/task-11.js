@@ -9,4 +9,5 @@ function sum(arr) {
     return result;
 }
 
-document.write(sum([1,2,10]));
+console.log(sum([1,2,10]));
+console.log(sum([8,3,1,2,10]));

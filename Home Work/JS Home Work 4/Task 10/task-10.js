@@ -6,7 +6,7 @@ function minNumber (array) {
     return Math.min(...array);
 }
 
-document.write(minNumber([2,5,8,2,4,3,1,5]));
+console.log(minNumber([2,5,8,2,4,3,1,5]));
 
 // Другий варіант
 function minNumber2 (arrays) {
@@ -19,4 +19,4 @@ function minNumber2 (arrays) {
     return min;
 }
 
-document.write(minNumber2([6,3,5,8,9,4,3,3,5]));
+console.log(minNumber2([6,3,5,8,9,4,3,3,5]));
