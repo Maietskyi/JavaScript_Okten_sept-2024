@@ -6,3 +6,5 @@ function arraySearch (array) {
         console.log(item);
     }
 }
+
+arraySearch ([1, 'Lesson', '584', true, "Task"])
