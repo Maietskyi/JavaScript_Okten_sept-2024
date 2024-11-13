@@ -4,7 +4,7 @@
 const sum = (arr) => {
     let result = 0;
    for (const number of arr){
-       result = result + number;
+       result += number;
    }
     return result;
 }
