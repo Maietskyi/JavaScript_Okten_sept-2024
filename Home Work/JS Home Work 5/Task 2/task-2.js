@@ -4,12 +4,6 @@
 // 1 варіант
 let circleArea = (circleRadius) => 3.14*(circleRadius*circleRadius);
 
-// {
-//     const result = 3.14*(circleRadius*circleRadius);
-//     console.log(result);
-//     return result;
-// }
-
 console.log(circleArea (12));
 
 // 2 варіант
