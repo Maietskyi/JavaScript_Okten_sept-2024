@@ -41,3 +41,7 @@ console.log(cards.filter(card => card.cardSuit === 'diamond'));
 // - всі трефи від 9 та більше
 console.log(cards.filter(card => card.cardSuit === 'clubs' &&
     card.value !== '6' && card.value !== '7' && card.value !== '8' && card.value !== '9' ));
+
+// Також я пробував робити так як Сергій, але мені виводить всі cardSuit === 'clubs' без виключень
+console.log(cards.filter(card => card.cardSuit === 'clubs' && (
+    card.value !== '6' || card.value !== '7' || card.value !== '8' || card.value !== '9' )));
