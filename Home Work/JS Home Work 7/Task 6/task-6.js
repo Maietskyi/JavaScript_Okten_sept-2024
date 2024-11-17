@@ -25,7 +25,7 @@ function Car (model, producer, graduationYear, maximumSpeed, enginVolume) {
             };
         this.changeYear = function (newValue) {
             if (newValue > 1900)
-            this.changeYear = newValue;
+            this.graduationYear = newValue;
         };
         this.addDriver = function (driver) {
             if (driver)
