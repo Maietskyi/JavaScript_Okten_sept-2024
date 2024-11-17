@@ -9,35 +9,33 @@
 
 class Car {
     constructor(model, producer, graduationYear, maximumSpeed, enginVolume) {
-
         this.model = model;
         this.producer = producer;
         this.graduationYear = graduationYear;
         this.maximumSpeed = maximumSpeed;
         this.enginVolume = enginVolume;
-        this.drive = function () {
+        };
+        drive () {
             console.log(`їдемо зі швидкістю ${this.maximumSpeed} кілометрів на годину`)
         };
-        this.info = function () {
+        info () {
             for (const key in this) {
                 console.log(key, this[key])
             }
         };
-        this.increaseMaxSpeed = function (newSpeed) {
+        increaseMaxSpeed (newSpeed) {
             if (newSpeed > 0)
                 this.maximumSpeed += newSpeed;
         };
-        this.changeYear = function (newValue) {
+        changeYear (newValue) {
             if (newValue > 1900)
                 this.graduationYear = newValue;
         };
-        this.addDriver = function (driver) {
+        addDriver (driver) {
             if (driver)
                 this.addDriver = driver
         }
-    }
 }
-
 let car = new Car('Passat B7', 'Wolkswagen Group', 2011, 190, 1.6)
 console.log(car);
 // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
