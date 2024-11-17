@@ -39,3 +39,8 @@ for (const user of сinderellas) {
     if (user.footSize === prince.shoe) {
         console.log(`Принц знайшов туфельку попелюшки ${user.name}`)
     }}
+
+
+//     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+const wife = сinderellas.find(cinderella => cinderella.footSize === prince.shoe);
+console.log(`Принц знайшов туфельку попелюшки ${wife.name}`)
