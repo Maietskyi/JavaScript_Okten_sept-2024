@@ -12,7 +12,7 @@ const  cinderella = {
     }
 
 }
-console.log(cinderella);
+
 // Я пробував робити ось так, але не знаю як це доробити
 // function copy (objectUser){
 //     for (const object of objectUser){
@@ -33,24 +33,33 @@ function copy (objectUser){
     return Object.assign({}, objectUser);
 }
 
+console.log(cinderella);
+cinderella.function();
 let copyCinderella = copy(cinderella);
 console.log(copyCinderella);
+copyCinderella.function();
 console.log(copyCinderella === cinderella);
 
 
+// Ось тут я робив так як Сергій на відео, але все одно важкувата конструкція
 
-
-
-
-
-
-
-
-
-
-//
-// function copy2 (objectUser){
-//     let string = JSON.stringify(objectUse);
-//     return JSON.stringify(string);
+// function copy2 (objectUser) {
+//     if (objectUser){
+//         let arrayFunction = [];
+//         for (const key in objectUser) {
+//             if (typeof objectUser[key] === 'function'){
+//                 const copyFunction = objectUser[key].bind();
+//                 arrayFunction.push({copyFunction, key});
+//             }
+//         }
+//     const string = JSON.stringify(objectUser);
+//     const parseToString = JSON.parse(string);
+//         for (const item of arrayFunction) {
+//             parseToString[item.key] = item.copyFunction;
+//         }
+//         return parseToString;
+//     }
+//     throw new Error("Error");
 // }
-
+//
+// console.log(copy2(cinderella));
