@@ -17,3 +17,6 @@ div.style.color = 'green';
 div.style.fontSize = '24px';
 
 document.body.appendChild(div);
+
+let divClone = div.cloneNode(true);
+document.body.appendChild(divClone);
