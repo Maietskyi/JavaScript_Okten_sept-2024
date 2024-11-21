@@ -29,3 +29,16 @@ for (const courses of coursesAndDurationArray) {
     divCreat.append(h4, p);
     document.body.appendChild(divCreat);
     }
+
+
+
+
+
+
+// 2 варіант
+for (const course of coursesAndDurationArray) {
+    let divCreat = document.createElement('div')
+    divCreat.innerText = `${course.title} тривалість ${course.monthDuration}`;
+    document.body.appendChild(divCreat);
+}
+
