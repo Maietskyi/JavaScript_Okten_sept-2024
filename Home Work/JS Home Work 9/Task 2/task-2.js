@@ -9,11 +9,12 @@ const Array = ['Main','Products','About us','Contacts'];
 
 let ulCreat = document.createElement('ul');
 ulCreat.classList.add('lisl-ul');
-document.body.appendChild(ulCreat)
 
 for (const string of Array) {
     let li = document.createElement('li');
-    li.classList.add('lisl-ul')
+    li.classList.add('lisl-li')
     li.innerText = string;
     ulCreat.appendChild(li);
 }
+
+document.body.appendChild(ulCreat);
