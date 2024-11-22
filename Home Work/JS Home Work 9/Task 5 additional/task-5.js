@@ -95,11 +95,11 @@ for (const courses of coursesArray) {
 
     let monthDuration = document.createElement('h3')
     monthDuration.classList.add('month')
-    monthDuration.innerText = courses.monthDuration;
+    monthDuration.innerText = `Duration of the course ${courses.monthDuration} month`;
 
     let hourDuration = document.createElement('h3')
     hourDuration.classList.add('hour')
-    hourDuration.innerText = courses.hourDuration;
+    hourDuration.innerText = `Number of hours ${courses.hourDuration}`;
 
     divDuration.append(monthDuration, hourDuration);
 
