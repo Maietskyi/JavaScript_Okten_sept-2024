@@ -10,7 +10,7 @@ const enteredKilograms = document.getElementById('enteredKilograms');
 let removingPounds = document.getElementById('removingPounds');
 
 
-enteredKilograms.oninput = function () {
+enteredKilograms.addEventListener('input', function () {
     let result = +enteredKilograms.value * 2.20462;
     removingPounds.innerText = `${enteredKilograms.value} кг = ${result} фунт`;
-};
+});
