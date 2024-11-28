@@ -31,13 +31,17 @@ next.addEventListener('click', function () {
 
 prev.addEventListener('click', function () {
     arrayView.innerText = '';
+    limit -= 10;
+    if (counter >= 10){
+        counter -= 10;
+    } else {
+        counter = 0;
+    }
     for (let i = counter; i < limit; i++) {
         const p = document.createElement('p')
         p.innerText = array[i].name;
         arrayView.appendChild(p);
     }
-    counter -= 10;
-    limit -= 10;
 });
 
 
