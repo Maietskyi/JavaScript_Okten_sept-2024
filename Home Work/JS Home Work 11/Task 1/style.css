@@ -1,7 +1,36 @@
-.basketsBox {
-    width: 400px;
-    height: 300px;
-    margin: 20px;
-    background-color: red;
+
+.divContainer{
+    margin: 12px;
+    padding: 12px;
+}
+.cartBox {
+    margin: 12px;
+    padding: 12px;
+    background-color: rgba(250, 235, 215, 0.5);
+    border-radius: 8px;
+    border: solid 2px;
+    display: flex;
+    flex-direction: column;
 }
 
+.cartBox>h3{
+    font-size: 26px;
+}
+
+.cartBox>h4{
+    font-size: 22px;
+}
+
+.cartBox>p{
+    font-size: 16px;
+}
+
+.productBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    border: solid 1px;
+    margin: 12px;
+}
