@@ -18,13 +18,13 @@ dataTable.onsubmit = function (event){
     console.log(numberLinesValue, numberСellsValue, contentsValue)
 
     for (let i = 0; i < numberLinesValue; i++) {
-        const p = document.createElement('p');
+        const tr = document.createElement('tr');
         for (let y = 0; y < numberСellsValue; y++){
-            const span = document.createElement('span');
-            span.innerText = contentsValue;
-            p.appendChild(span)
+            const td = document.createElement('td');
+            td.innerText = contentsValue;
+            tr.appendChild(td)
         }
-        formTable.appendChild(p)
+        formTable.appendChild(tr)
     }
 }
 
