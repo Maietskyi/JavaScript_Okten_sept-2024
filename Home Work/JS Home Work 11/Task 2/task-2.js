@@ -63,7 +63,6 @@ fetch('https://dummyjson.com/recipes')
             cuisine.innerText = `Cuisine: ${recipe.cuisine}`
             difficulty.innerText = `Difficulty: ${recipe.difficulty}`
             id.innerText = `Id: ${recipe.id}`
-            mealType.innerText = `Meal Type: ${recipe.mealType}`
             prepTimeMinutes.innerText = `Prep Time Minutes: ${recipe.prepTimeMinutes}`
             rating.innerText = `Rating: ${recipe.rating}`
             reviewCount.innerText = `Review Count: ${recipe.reviewCount}`
@@ -72,8 +71,19 @@ fetch('https://dummyjson.com/recipes')
 
 
             divParameters.append(caloriesPerServing, cookTimeMinutes, cuisine, difficulty,
-                id, mealType, prepTimeMinutes, rating, reviewCount, servings, userId)
+                id, prepTimeMinutes, rating, reviewCount, servings, userId)
             listDishes.append(divParameters)
+
+            mealType.innerText = `Meal Type: ${recipe.mealType}`
+            let ulMealType = document.createElement('ul')
+            ulMealType.innerText = `Tags:`
+            ulMealType.classList.add('ulMealType')
+            for (const meal of recipe.mealType) {
+                let li = document.createElement('li')
+                li.innerText = `${meal}`
+                ulMealType.append(li)
+                listDishes.append(ulMealType)
+            }
 
             let ulTags = document.createElement('ul')
             ulTags.innerText = `Tags:`
