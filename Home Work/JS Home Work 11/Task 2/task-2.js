@@ -25,7 +25,7 @@ fetch('https://dummyjson.com/recipes')
             listDishes.append(name, image)
 
             let ulIngredient = document.createElement('ul')
-            ulIngredient.innerText = `Ingredient:`
+            ulIngredient.innerText = `Ingredients:`
             for (const ingredient of recipe.ingredients) {
                 let li = document.createElement('li')
                 li.innerText = `${ingredient}`
@@ -33,13 +33,13 @@ fetch('https://dummyjson.com/recipes')
                 listDishes.append(ulIngredient)
             }
 
-            let ulInstruction = document.createElement('ul')
-            ulInstruction.innerText = `Ingredient:`
+            let olInstruction = document.createElement('ol')
+            olInstruction.innerText = `Сooking instructions:`
             for (const ingredient of recipe.instructions) {
                 let li = document.createElement('li')
                 li.innerText = `${ingredient}`
-                ulInstruction.append(li)
-                listDishes.append(ulInstruction)
+                olInstruction.append(li)
+                listDishes.append(olInstruction)
             }
 
             let caloriesPerServing = document.createElement('p')
