@@ -76,7 +76,7 @@ fetch('https://dummyjson.com/recipes')
 
             mealType.innerText = `Meal Type: ${recipe.mealType}`
             let ulMealType = document.createElement('ul')
-            ulMealType.innerText = `Tags:`
+            ulMealType.innerText = `Meal Type:`
             ulMealType.classList.add('ulMealType')
             for (const meal of recipe.mealType) {
                 let li = document.createElement('li')
@@ -94,11 +94,8 @@ fetch('https://dummyjson.com/recipes')
                 ulTags.append(li)
                 listDishes.append(ulTags)
             }
-
             divContainer.appendChild(listDishes)
         }
-
-
     })
 
 
