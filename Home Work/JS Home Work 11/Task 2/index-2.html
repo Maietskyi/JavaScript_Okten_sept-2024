@@ -7,6 +7,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="style.css">
+    <style>
+        .divContainer{
+            margin: 12px;
+            padding: 12px;
+            display: grid;
+            grid-template-columns: 30vw 30vw 30vw;
+        }
+        .listDishes {
+            margin: 12px;
+            padding: 12px;
+            background-color: rgba(250, 235, 215, 0.5);
+            border-radius: 8px;
+            border: solid 2px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3{
+            font-size: 26px;
+            text-align: center;
+        }
+
+
+        .ulIngredient, .olInstruction, .ulTags, .divParameters {
+            display: flex;
+            justify-content: flex-start;
+            align-items: self-start;
+            flex-direction: column;
+            border-radius: 4px;
+            border: solid 1px;
+            margin: 12px;
+            background-color: #dddddd;
+            padding: 12px 28px;
+
+        }
+
+        .olInstruction>li{
+            padding-left: 12px;
+
+
+        }
+
+        .ulTags>li{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 <script src="task-2.js"></script>

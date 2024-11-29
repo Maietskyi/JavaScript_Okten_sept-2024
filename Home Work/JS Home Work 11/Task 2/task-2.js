@@ -9,15 +9,15 @@ fetch('https://dummyjson.com/recipes')
         let {recipes} = item;
         let divContainer = document.createElement('div');
         divContainer.classList.add('divContainer')
-        console.log(recipes)
+        // console.log(recipes)
         document.body.append(divContainer)
 
         for (const recipe of recipes) {
             let listDishes = document.createElement('ul')
             listDishes.classList.add('listDishes')
-            console.log(recipe)
+            // console.log(recipe)
 
-            let name = document.createElement('p')
+            let name = document.createElement('h2')
             let image = document.createElement('img')
 
             name.innerText = `${recipe.name}`
@@ -26,6 +26,7 @@ fetch('https://dummyjson.com/recipes')
 
             let ulIngredient = document.createElement('ul')
             ulIngredient.innerText = `Ingredients:`
+            ulIngredient.classList.add('ulIngredient')
             for (const ingredient of recipe.ingredients) {
                 let li = document.createElement('li')
                 li.innerText = `${ingredient}`
@@ -35,6 +36,7 @@ fetch('https://dummyjson.com/recipes')
 
             let olInstruction = document.createElement('ol')
             olInstruction.innerText = `Сooking instructions:`
+            olInstruction.classList.add('olInstruction')
             for (const ingredient of recipe.instructions) {
                 let li = document.createElement('li')
                 li.innerText = `${ingredient}`
@@ -42,6 +44,8 @@ fetch('https://dummyjson.com/recipes')
                 listDishes.append(olInstruction)
             }
 
+            let divParameters = document.createElement('div');
+            divParameters.classList.add('divParameters')
             let caloriesPerServing = document.createElement('p')
             let cookTimeMinutes = document.createElement('p')
             let cuisine = document.createElement('p')
@@ -52,24 +56,35 @@ fetch('https://dummyjson.com/recipes')
             let rating = document.createElement('p')
             let reviewCount = document.createElement('p')
             let servings = document.createElement('p')
-            let tags = document.createElement('p')
             let userId = document.createElement('p')
 
-            caloriesPerServing.innerText = `${recipe.caloriesPerServing}`
-            cookTimeMinutes.innerText = `${recipe.cookTimeMinutes}`
-            cuisine.innerText = `${recipe.cuisine}`
-            difficulty.innerText = `${recipe.difficulty}`
-            id.innerText = `${recipe.id}`
-            mealType.innerText = `${recipe.mealType}`
-            prepTimeMinutes.innerText = `${recipe.prepTimeMinutes}`
-            rating.innerText = `${recipe.rating}`
-            reviewCount.innerText = `${recipe.reviewCount}`
-            servings.innerText = `${recipe.servings}`
-            tags.innerText = `Tags: ${recipe.tags}`
+            caloriesPerServing.innerText = `Calories Per Serving: ${recipe.caloriesPerServing}`
+            cookTimeMinutes.innerText = `Cook Time Minutes: ${recipe.cookTimeMinutes}`
+            cuisine.innerText = `Cuisine: ${recipe.cuisine}`
+            difficulty.innerText = `Difficulty: ${recipe.difficulty}`
+            id.innerText = `Id: ${recipe.id}`
+            mealType.innerText = `Meal Type: ${recipe.mealType}`
+            prepTimeMinutes.innerText = `Prep Time Minutes: ${recipe.prepTimeMinutes}`
+            rating.innerText = `Rating: ${recipe.rating}`
+            reviewCount.innerText = `Review Count: ${recipe.reviewCount}`
+            servings.innerText = `Servings: ${recipe.servings}`
             userId.innerText = `User Id: ${recipe.userId}`
 
-            listDishes.append(caloriesPerServing, cookTimeMinutes, cuisine, difficulty,
-                id, mealType, prepTimeMinutes, rating, reviewCount, servings, tags, userId)
+
+            divParameters.append(caloriesPerServing, cookTimeMinutes, cuisine, difficulty,
+                id, mealType, prepTimeMinutes, rating, reviewCount, servings, userId)
+            listDishes.append(divParameters)
+
+            let ulTags = document.createElement('ul')
+            ulTags.innerText = `Tags:`
+            ulTags.classList.add('ulTags')
+            for (const tag of recipe.tags) {
+                let li = document.createElement('li')
+                li.innerText = `${tag}`
+                ulTags.append(li)
+                listDishes.append(ulTags)
+            }
+
             divContainer.appendChild(listDishes)
         }
 
